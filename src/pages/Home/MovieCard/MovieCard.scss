@@ -1,0 +1,26 @@
+@import "../../../common/color.scss";
+
+.movie__card {
+    background-color: $secondary-color;
+    cursor: pointer;
+}
+
+.movie__card__img {
+    height: 250px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.movie__card__text {
+    color: $font-primary;
+    padding: 20px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+}

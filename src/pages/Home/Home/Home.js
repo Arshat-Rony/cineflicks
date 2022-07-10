@@ -1,16 +1,12 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
-import { fetchAsyncMovies, fetchAsyncShows } from '../../../features/Movies/MovieSlice';
-import MovieList from '../MovieList/MovieList';
+import React from 'react'
+import Banner from "../Banner/Banner";
+import Hero from '../Hero/Hero';
+import "./Home.scss"
 const Home = () => {
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(fetchAsyncMovies())
-        dispatch(fetchAsyncShows())
-    }, [dispatch])
     return (
-        <div>
-            <MovieList></MovieList>
+        <div className='home'>
+            <Banner></Banner>
+            <Hero></Hero>
         </div>
     );
 };

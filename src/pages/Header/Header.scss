@@ -1,26 +1,26 @@
 @import "../../common/color.scss";
 
 .header {
-    height: 70px;
-    background-color: $secondary-color;
-}
+    height: 120px;
+    // background-color: $secondary-color;
 
-
-
-.logo__text {
-    position: relative;
-    top: -30px;
-    left: -15px;
-    text-decoration: none;
-    color: $font-primary;
-    font-size: 20px;
-    font-weight: 600;
+    .logo__text {
+        position: relative;
+        top: -30px;
+        left: -15px;
+        text-decoration: none;
+        color: $font-primary;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 99;
+    }
 }
 
 .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 .nav__link {
@@ -53,6 +53,35 @@
     color: pink;
 }
 
-#search__btn {
-    color: $font-primary;
+.search__form {
+
+
+    input {
+        width: 230px;
+        height: 35px;
+        background-color: $font-primary;
+        border-radius: 4px;
+        text-align: center;
+        z-index: 99;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    #search__btn {
+        width: 40px;
+        height: 33px;
+        z-index: 99;
+    }
+}
+
+@media (min-width:768px) {
+    .header {
+        height: 70px;
+
+        .header__container {
+            flex-direction: row;
+        }
+    }
 }

@@ -1,8 +1,11 @@
 import React from 'react';
+import Slider from "react-slick";
+import { settings } from '../../../features/Settings';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getAllMovies, getAllShows } from '../../../features/Movies/MovieSlice';
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieList.scss'
+import Loading from '../../../features/Loader/Loading';
 const MovieList = () => {
     const movies = useSelector(getAllMovies);
     const shows = useSelector(getAllShows);
@@ -16,17 +19,18 @@ const MovieList = () => {
                     <div className="movie__container">
                         <h3 className='heading movie_heading'>Movies</h3>
                         <div className="movies">
-                            {
-                                movieData.map((movie, index) =>
-                                    movie ? <MovieCard key={index} movie={movie}></MovieCard> : ""
-                                )
-                            }
+                            <Slider {...settings}>
+                                {
+                                    movieData.map((movie, index) =>
+                                        movie ? <MovieCard key={index} movie={movie}></MovieCard> : ""
+                                    )
+                                }
+                            </Slider>
                         </div>
                     </div>
                     :
                     <>
-                        <h3>Something went wrong. Please try again later.</h3>
-                    </>
+                        <Loading type="spokes" color="red"></Loading>                    </>
             }
             {
                 shows.Response === "True"
@@ -34,17 +38,18 @@ const MovieList = () => {
                     <div className="show__container">
                         <h3 className='heading show_heading'>Shows</h3>
                         <div className="shows">
-                            {
-                                showsData.map((movie, index) =>
-                                    movie ? <MovieCard key={index} movie={movie}></MovieCard> : ""
-                                )
-                            }
+                            <Slider {...settings}>
+                                {
+                                    showsData.map((movie, index) =>
+                                        movie ? <MovieCard key={index} movie={movie}></MovieCard> : ""
+                                    )
+                                }
+                            </Slider>
                         </div>
                     </div>
                     :
                     <>
-                        <h3>Something went wrong. Please try again later.</h3>
-                    </>
+                        <Loading type="spokes" color="red"></Loading>                    </>
             }
         </div>
     );

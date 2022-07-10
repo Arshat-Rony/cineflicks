@@ -13,7 +13,7 @@ const MovieCard = (props) => {
                 </div>
                 <div className="movie__card__text">
                     <h3>{Title}</h3>
-                    <p>{Year}</p>
+                    <p>Year : {Year}</p>
                 </div>
             </div>
         </Link>

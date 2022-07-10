@@ -3,6 +3,14 @@
 .movie__card {
     background-color: $secondary-color;
     cursor: pointer;
+    min-height: 440px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.8s;
+}
+
+.movie__card:hover {
+    transform: scale(1.01);
 }
 
 .movie__card__img {

@@ -1,0 +1,54 @@
+@import "../../common/color.scss";
+
+.login_section {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    .google {
+        width: 200px;
+        height: 45px;
+        margin: 0 auto;
+        background-color: $btn-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+    }
+
+}
+
+.login_form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+
+
+    input {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    input[type=submit] {
+        background-color: $btn-color;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .error {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+}

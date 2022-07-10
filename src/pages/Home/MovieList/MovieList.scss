@@ -11,16 +11,10 @@
         font-weight: 550;
         margin: 14px 0;
     }
-
-    .movies,
-    .shows {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        grid-gap: 15px;
-    }
 }
 
 
 .show__container {
     margin-top: 160px;
+    margin-bottom: 50px;
 }

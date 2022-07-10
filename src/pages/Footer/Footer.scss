@@ -1,11 +1,63 @@
 @import "../../common/color.scss";
 
-.footer {
+.footer_section {
     background-color: $secondary-color;
+
 }
 
 .footer__container {
     height: 75px;
     text-align: center;
     padding: 15px 0;
+}
+
+.footer {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.services,
+.terms_conditions,
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.services>a,
+.terms_conditions>a,
+.company>a {
+    margin-top: 12px;
+}
+
+.footer-title {
+    color: #eee1e1;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.footer_logo {
+    width: 90px;
+    height: 90px;
+}
+
+.copyright {
+    text-align: center;
+    background: #FFF4D6;
+}
+
+@media (min-width:768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 60px;
+
+    }
 }
